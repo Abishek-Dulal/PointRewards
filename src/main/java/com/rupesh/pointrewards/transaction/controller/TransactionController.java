@@ -23,7 +23,7 @@ public class TransactionController {
     private TransactionService transactionService;
 
 
-    @GetMapping
+    @GetMapping("/reward")
     public ResponseEntity<List<CustomerReward>> getRewardPointsByQuarter() {
         List<CustomerReward> rewardPointsByQuarter = transactionService.getRewardPointsByQuarter();
         return ResponseEntity.ok(rewardPointsByQuarter);

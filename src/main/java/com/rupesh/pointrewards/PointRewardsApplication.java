@@ -10,19 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
 
 @SpringBootApplication
-public class PointRewardsApplication implements CommandLineRunner {
+public class PointRewardsApplication  {
 
     public static void main(String[] args) {
         SpringApplication.run(PointRewardsApplication.class, args);
     }
 
-    @Autowired
-    TransactionService transactionService;
 
-    @Override
-    public void run(String... args) throws Exception {
-        List<CustomerReward> rewardPointsByQuarter = transactionService.getRewardPointsByQuarter();
-
-        System.out.println(rewardPointsByQuarter);
-    }
 }
